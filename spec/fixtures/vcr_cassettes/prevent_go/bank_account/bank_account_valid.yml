@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://integration-api.preventgo.io/v2/bank-account
+    body:
+      encoding: ASCII-8BIT
+      base64_string: |
+        LS0tLTU2NWMwYTEwLTQ5YzYtNGQ4OC1hYTM3LWJmZjc1NzgwMGVlZQ0KQ29uLS0tLTU2NWMw
+        YTEwLTQ5YzYtNGQ4OC1hYTM3LWJmZjc1NzgwMGVlZS0tDQo=
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - multipart/form-data; boundary=--565c0a10-49c6-4d88-aa37-bff757800eee
+      Content-Length:
+      - '293120'
+      Authorization:
+      - Basic cXVlbnRpbkBjYXBzZW5zLmV1OjBCQ0Z6SEdUSHQ1b3ZlNjBpWVF1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 07 Jun 2019 10:34:36 GMT
+      Server:
+      - unknown
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubdomains;
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '606'
+      Cache-Control:
+      - no-cache
+      Set-Cookie:
+      - ROUTEID=.1;
+    body:
+      encoding: UTF-8
+      string: "{\"requestInfo\":{\"timestamp\":\"2017-04-06T08:33:46.457Z\",\"duration\":155,\"uuid\":\"string\",\"remainingRequests\":22,\"state\":\"IN_PROGRESS\",\"callbackSecretToken\":\"string\"},\"processedImageUrl\":\"string\",\"documentDetails\":{\"iban\":\"FR761234123412341234123412\",\"bicCode\":\"AGRIFRPPXXX\"},\"documentType\":\"RIB\",\"controlsGroups\":{\"holder\":{\"documentConsistency\":{\"birthNameFound\":\"OK\",\"lastNameFound\":\"OK\",\"firstNameFound\":\"OK\",\"firstNameInitialsFound\":\"OK\",\"addressFound\":\"OK\"}},\"bankAccount\":{\"documentConsistency\":{\"ibanMatch\":\"OK\",\"bicCodeMatch\":\"OK\"}},\"legalEntity\":{\"documentConsistency\":{\"legalNameFound\":\"OK\"}},\"document\":{\"typeRecognized\":\"OK\",\"quality\":{\"aboveMinimumThreshold\":\"OK\",\"errorCode\":0},\"noAnnotationFound\":\"OK\",\"noTamperingSignFound\":\"OK\",\"ibanFound\":\"OK\",\"ibanFormatValid\":\"OK\",\"ibanNotPublic\":\"OK\",\"publicIbanUrl\":\"http://www.netheos.com\",\"bicCodeFound\":\"OK\"},\"additional\":{\"expressionSearch\":{\"additionalProp1\":{\"found\":\"OK\",\"occurrences\":[{\"lineText\":\"string\",\"matchText\":\"string\",\"startIndex\":0}]},\"additionalProp2\":{\"found\":\"OK\",\"occurrences\":[{\"lineText\":\"string\",\"matchText\":\"string\",\"startIndex\":0}]},\"additionalProp3\":{\"found\":\"OK\",\"occurrences\":[{\"lineText\":\"string\",\"matchText\":\"string\",\"startIndex\":0}]}}}}}"
+    http_version:
+  recorded_at: Fri, 07 Jun 2019 10:34:37 GMT
+recorded_with: VCR 4.0.0

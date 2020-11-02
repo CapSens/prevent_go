@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://integration-api.preventgo.io/v2/driver-license
+    body:
+      encoding: ASCII-8BIT
+      base64_string: |
+        LS0tLTU2NWMwYTEwLTQ5YzYtNGQ4OC1hYTM3LWJmZjc1NzgwMGVlZQ0KQ29uLS0tLTU2NWMw
+        YTEwLTQ5YzYtNGQ4OC1hYTM3LWJmZjc1NzgwMGVlZS0tDQo=
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - multipart/form-data; boundary=--565c0a10-49c6-4d88-aa37-bff757800eee
+      Content-Length:
+      - '293120'
+      Authorization:
+      - Basic cXVlbnRpbkBjYXBzZW5zLmV1OjBCQ0Z6SEdUSHQ1b3ZlNjBpWVF1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 07 Jun 2019 10:34:36 GMT
+      Server:
+      - unknown
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubdomains;
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '606'
+      Cache-Control:
+      - no-cache
+      Set-Cookie:
+      - ROUTEID=.1;
+    body:
+      encoding: UTF-8
+      string: '{"requestInfo":{"timestamp":"2019-06-07T10:34:32.902Z","duration":4266,"uuid":"10270e0f-db6c-43e6-a0c4-83f118970ac5","remainingRequests":26,"state":"DONE"},"documentType":"DRIVER_LICENSE","documentDetails":{"document":{"issuanceCountry":"FR","expirationDate":"2032-12-04","number":"17BB15232"},"holder":{"birthName":"DEGRAEVE"},"mrz":{"line1":"D1FRA17BB152323321204DEGRAEVE3"}},"processedPageIndex":0,"controlsGroups":{"document":{"typeRecognized":"OK","quality":{"aboveMinimumThreshold":"OK"},"documentAspect":{"generalAppearanceMatch":"OK","picturePresent":"SKIPPED"},"notExpired":"OK","mrzValid":"OK"}}}'
+    http_version:
+  recorded_at: Fri, 07 Jun 2019 10:34:37 GMT
+recorded_with: VCR 4.0.0
