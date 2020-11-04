@@ -21,7 +21,7 @@ Or install it yourself as:
 
 ## Configuration
 
-Create an account on [Hcaptcha website](https://www.preventgo.io/) and ask for API keys.
+Create an account on [PreventGO website](https://www.preventgo.io/) and ask for API keys.
 
 And then add an initializer
 
@@ -190,4 +190,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the Hcaptcha project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/hcaptcha/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the PreventGo project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/Capsens/prevent_go/blob/master/CODE_OF_CONDUCT.md).

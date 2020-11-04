@@ -30,8 +30,8 @@ Gem::Specification.new do |spec|
   spec.add_dependency('multipart-post', '>= 2.1.1')
   spec.add_dependency('mime-types', '>= 3.0')
 
-  spec.add_development_dependency('rake', '>= 10.1.0')
-  spec.add_development_dependency('rspec', '>= 3.0.0')
+  spec.add_development_dependency('rake', '~> 12.1')
+  spec.add_development_dependency('rspec', '~> 3.0')
   spec.add_development_dependency('vcr')
   spec.add_development_dependency('webmock')
 end

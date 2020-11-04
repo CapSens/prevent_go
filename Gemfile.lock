@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     prevent_go (0.1.0)
-      mime-types
+      mime-types (>= 3.0)
       multipart-post (>= 2.1.1)
 
 GEM
@@ -10,7 +10,6 @@ GEM
   specs:
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
-    byebug (11.1.3)
     crack (0.4.4)
     diff-lcs (1.4.4)
     hashdiff (1.0.1)
@@ -43,9 +42,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  byebug
   prevent_go!
-  rake (~> 12.0)
+  rake (~> 12.1)
   rspec (~> 3.0)
   vcr
   webmock

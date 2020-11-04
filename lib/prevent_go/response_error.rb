@@ -12,11 +12,11 @@ module PreventGo
     end
 
     def type
-      @details['error']['code']
+      @details.dig('error', 'code')
     end
 
     def message
-      @details['error']['message']
+      @details.dig('error', 'message')
     end
   end
 end
