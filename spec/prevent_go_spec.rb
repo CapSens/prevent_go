@@ -26,7 +26,7 @@ RSpec.describe PreventGo do
     end
 
     it 'overrides initial configuration' do
-      expect { subject }.to change { PreventGo.configuration.site_key }.from('test@capsens.eu').to('site_key')
+      expect { subject }.to change { PreventGo.configuration.site_key }.from('test').to('site_key')
       expect(PreventGo.configuration.secret_key).to eq('secret_key')
       reset_configuration
     end
