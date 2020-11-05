@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://integration-api.preventgo.io/v2
+    body:
+      encoding: ASCII-8BIT
+      base64_string: |
+        LS0tLTM0M2E3OTg1LTQwNDctNDBlNS05NjMwLThlZWEyYzk1NWY0MA0KQ29u
+        NDBlNS05NjMwLThlZWEyYzk1NWY0MC0tDQo=
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - multipart/form-data; boundary=--343a7985-4047-40e5-9630-8eea2c955f40
+      Content-Length:
+      - '13706'
+      Authorization:
+      - Basic cXVlbnRpbkBjYXBzZW5zLmV1OjBCQ0Z6SEdUSHQ1b3ZlNjBpWVF1
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Fri, 07 Jun 2019 11:25:39 GMT
+      Server:
+      - unknown
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubdomains;
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '56'
+      Cache-Control:
+      - no-cache
+      Set-Cookie:
+      - ROUTEID=.1;
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"error":{"code":1205,"message":"MRZ found but broken"}}'
+    http_version:
+  recorded_at: Fri, 07 Jun 2019 11:25:39 GMT
+recorded_with: VCR 4.0.0
