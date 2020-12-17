@@ -181,7 +181,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/CapSens/loan_creator.
+Bug reports and pull requests are welcome on GitHub at https://github.com/CapSens/prevent_go
 
 
 ## License
