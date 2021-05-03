@@ -2,8 +2,8 @@ PATH
   remote: .
   specs:
     prevent_go (0.1.0)
-      mime-types (>= 3.0)
-      multipart-post (>= 2.1.1)
+      mime-types (~> 3.0)
+      multipart-post (~> 2.1, >= 2.1.1)
 
 GEM
   remote: https://rubygems.org/
@@ -45,8 +45,8 @@ DEPENDENCIES
   prevent_go!
   rake (~> 12.1)
   rspec (~> 3.0)
-  vcr
-  webmock
+  vcr (~> 5.0)
+  webmock (~> 3.9)
 
 BUNDLED WITH
    2.1.4
