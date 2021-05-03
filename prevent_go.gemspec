@@ -4,7 +4,7 @@ Gem::Specification.new do |spec|
   spec.name          = "prevent_go"
   spec.version       = PreventGo::VERSION
   spec.authors       = ["Quentin Degraeve"]
-  spec.email         = ["quentin@capsens.com"]
+  spec.email         = ["development@capsens.com"]
 
   spec.summary       = %q{PreventGo sdk}
   spec.description   = %q{PreventGo sdk}
@@ -27,11 +27,11 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_dependency('multipart-post', '>= 2.1.1')
-  spec.add_dependency('mime-types', '>= 3.0')
+  spec.add_dependency('multipart-post', '~> 2.1', '>= 2.1.1')
+  spec.add_dependency('mime-types', '~> 3.0')
 
   spec.add_development_dependency('rake', '~> 12.1')
   spec.add_development_dependency('rspec', '~> 3.0')
-  spec.add_development_dependency('vcr')
-  spec.add_development_dependency('webmock')
+  spec.add_development_dependency('vcr', '~> 5.0')
+  spec.add_development_dependency('webmock', '~> 3.9')
 end
