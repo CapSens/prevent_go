@@ -15,13 +15,17 @@
 
 module PreventGo
   class TaxNotice < Base
-    def endpoint
-      '/tax-notice'
-    end
-
     def holders_data
       @_holders_data ||=
-        [@request.dig('taxNoticeDetails', 'holder1'), @request.dig('taxNoticeDetails', 'holder2')].compact
+        [@request.dig('taxDocumentInfo', 'taxNoticeDetails', 'holder1'), @request.dig('taxDocumentInfo', 'taxNoticeDetails', 'holder2')].compact
+    end
+
+    def document_details
+      @_document_details ||= @request.dig('taxDocumentInfo', 'documentDetails') || {}
+    end
+
+    def document_controls
+      @_document_controls ||= @request.dig('taxDocumentInfo', 'controlsGroups', 'document') || {}
     end
 
     def quality_validated?
@@ -33,7 +37,7 @@ module PreventGo
     end
 
     def fetch_holders_infos(*keys)
-      keys = default_holders_keys if keys.empty?
+      keys += default_holders_keys if keys.empty?
       holders_data.map { |holder| holder.compact.slice(*keys).values }
     end
 

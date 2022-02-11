@@ -112,7 +112,7 @@ RSpec.describe PreventGo::TaxNotice do
     describe '.endpoint' do
       subject { instance.send(:endpoint) }
 
-      it { is_expected.to eq('/tax-notice') }
+      it { is_expected.to eq('/any') }
     end
   end
 end
