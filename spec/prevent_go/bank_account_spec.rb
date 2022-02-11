@@ -69,7 +69,7 @@ RSpec.describe PreventGo::BankAccount do
     describe '.endpoint' do
       subject { instance.send(:endpoint) }
 
-      it { is_expected.to eq('/bank-account') }
+      it { is_expected.to eq('/any') }
     end
   end
 end
