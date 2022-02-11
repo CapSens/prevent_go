@@ -47,7 +47,7 @@ Each type of document that can be verified has his own class as follow:
 
 ```ruby
     PreventGo::BankAccount
-    PreventGo::Identity
+    PreventGo::IdentityDocument
     PreventGo::PropertyTaxNotice
     PreventGo::TaxNotice
     PreventGo::ProviderInvoice
@@ -65,7 +65,7 @@ Each instance of one of the previous classes can be initialized as following:
 
 And can access to thoses methods
 
-| method               | Description | 
+| method               | Description |
 |----------------------|-------------|
 | `.document_type`     | return document type as string |
 | `.document_details`  | return a hash with informations givent by the API or an empty hash |
@@ -95,7 +95,7 @@ additional instance methods available:
 - `:bic`
 ------
 
-`PreventGo::Identity`
+`PreventGo::IdentityDocument`
 
 Individual person identity document, can be either ID card, passport or driver license
 
@@ -104,7 +104,7 @@ optional params to pass to bank_account validation are:
 
 example:
 ```ruby
-  PrevenGo::Identity.new(
+  PrevenGo::IdentityDocument.new(
     file,
     holder: {"firstName":"John", "birthName":"Doe"}
   )

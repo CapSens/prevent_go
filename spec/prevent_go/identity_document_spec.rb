@@ -1,4 +1,4 @@
-RSpec.describe PreventGo::Identity do
+RSpec.describe PreventGo::IdentityDocument do
   describe '.new' do
     context 'with only a valid file', cassette: :identity_valid do
       subject { described_class.new(file) }
@@ -111,7 +111,7 @@ RSpec.describe PreventGo::Identity do
     describe '.endpoint' do
       subject { instance.send(:endpoint) }
 
-      it { is_expected.to eq('/identity/individual') }
+      it { is_expected.to eq('/any') }
     end
   end
 end

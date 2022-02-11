@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://integration-api.preventgo.io/v2/any
+    body:
+      encoding: ASCII-8BIT
+      base64_string: |
+        LS0tLTU2NWMwYTEwLTQ5YzYtNGQ4OC1hYTM3LWJmZjc1NzgwMGVlZQ0KQ29uLS0tLTU2NWMw
+        YTEwLTQ5YzYtNGQ4OC1hYTM3LWJmZjc1NzgwMGVlZS0tDQo=
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Content-Type:
+      - multipart/form-data; boundary=--565c0a10-49c6-4d88-aa37-bff757800eee
+      Content-Length:
+      - '293120'
+      Authorization:
+      - Basic cXVlbnRpbkBjYXBzZW5zLmV1OjBCQ0Z6SEdUSHQ1b3ZlNjBpWVF1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 07 Jun 2019 10:34:36 GMT
+      Server:
+      - unknown
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubdomains;
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '606'
+      Cache-Control:
+      - no-cache
+      Set-Cookie:
+      - ROUTEID=.1;
+    body:
+      encoding: UTF-8
+      string: "{\"requestInfo\":{\"timestamp\":\"2022-01-27T15:57:27.948743Z\",\"state\":\"DONE\",\"duration\":3645,\"uuid\":\"ad1a4581-f994-4380-947d-af1231475166\",\"remainingRequests\":210},\"documentTypeFamily\":\"IDENTITY_DOCUMENT\",\"documentType\":\"ID_CARD\",\"pages\":[{\"fileIndex\":0,\"pageIndexInFile\":0,\"pageType\":\"FRONT_SIDE\",\"colorMode\":\"COLOR\"},{\"fileIndex\":1,\"pageIndexInFile\":0,\"colorMode\":\"COLOR\"}],\"identityDocumentInfo\":{\"documentDetails\":{\"document\":{\"issuanceCountry\":\"FR\",\"issuanceDate\":\"2005-06-30\",\"expirationDate\":\"2020-06-29\",\"number\":\"050693202043\"},\"holder\":{\"firstNames\":[\"CHRISTIANE\",\"NI\"],\"firstName\":\"CHRISTIANE\",\"lastName\":\"LAUGE\",\"birthName\":\"DOUEL\",\"birthDate\":\"1929-06-20\",\"birthPlace\":\"SOISSONS (02)\",\"gender\":\"F\"},\"mrz\":{\"line1\":\"IDFRADOUEL\\u003c\\u003c\\u003c\\u003c\\u003c\\u003c\\u003c\\u003c\\u003c\\u003c\\u003c\\u003c\\u003c\\u003c\\u003c\\u003c\\u003c\\u003c\\u003c\\u003c932013\",\"line2\":\"0506932020438CHRISTIANE\\u003c\\u003cNI2906209F3\"}},\"controlsGroups\":{\"document\":{\"typeRecognized\":\"OK\",\"quality\":{\"aboveMinimumThreshold\":\"OK\"},\"noAnnotationFound\":\"SKIPPED\",\"noTamperingSignFound\":\"SKIPPED\",\"notExpired\":\"OK\",\"mrzValid\":\"OK\",\"frontSideFound\":\"OK\",\"backSideFound\":\"KO\",\"issuanceAndExpirationDateMatch\":\"SKIPPED\",\"ocrAnalysis\":{\"mrzBirthNameMatch\":\"OK\",\"mrzFirstNamesMatch\":\"OK\",\"mrzBirthDateMatch\":\"OK\",\"mrzDocumentNumberMatch\":\"OK\",\"faithfulFont\":\"OK\",\"mrzIssuanceDateMatch\":\"SKIPPED\",\"issuanceDateRead\":\"SKIPPED\",\"expirationDateRead\":\"SKIPPED\"},\"documentAspect\":{\"generalAppearanceMatch\":\"OK\",\"picturePresent\":\"OK\"},\"securityElements\":\"OK\"}}},\"controlsSummary\":-3,\"keysWithError\":[\"document.backSideFound\"]}"
+    http_version:
+  recorded_at: Fri, 07 Jun 2019 10:34:37 GMT
+recorded_with: VCR 4.0.0

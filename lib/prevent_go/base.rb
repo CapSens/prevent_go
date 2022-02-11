@@ -33,7 +33,7 @@ module PreventGo
     private
 
     def endpoint
-      ''
+      '/any'
     end
   end
 end

@@ -4,14 +4,13 @@
 # file_2: file => optional
 
 module PreventGo
-  class Identity < Base
-
+  class IdentityDocument < Base
     def holder_controls
-      @_holder_controls ||= @request.dig('controlsGroups', 'holder') || {}
+      @_holder_controls ||= @request.dig('identityDocumentInfo', 'controlsGroups', 'holder') || {}
     end
 
     def holder_data
-      @_holder_data || @request.dig('documentDetails', 'holder') || {}
+      @_holder_data ||= @request.dig('identityDocumentInfo', 'documentDetails', 'holder') || {}
     end
 
     def fetch_holder_infos(*keys)
@@ -23,20 +22,23 @@ module PreventGo
       [
         document_controls['typeRecognized'],
         document_controls.dig('quality', 'aboveMinimumThreshold'),
-        document_controls['notExpired'],
         document_controls['mrzValid']
       ].all? { |entry| entry == 'OK' }
     end
 
+    def document_controls
+      @_document_controls ||= @request.dig('identityDocumentInfo', 'controlsGroups', 'document') || {}
+    end
+
+    def document_details
+      @_document_details ||= @request.dig('identityDocumentInfo', 'documentDetails') || {}
+    end
+
     def not_expired?
-      @request.dig('controlsGroups', 'document', 'notExpired') == 'OK'
+      @request.dig('identityDocumentInfo', 'controlsGroups', 'document', 'notExpired') == 'OK'
     end
 
     private
-
-    def endpoint
-      '/identity/individual'
-    end
 
     def default_holder_keys
       %w[firstName lastName birthName birthDate gender]

@@ -11,7 +11,7 @@ module PreventGo
   autoload :Base, 'prevent_go/base'
   autoload :BankAccount, 'prevent_go/bank_account'
   autoload :DriverLicense, 'prevent_go/driver_license'
-  autoload :Identity, 'prevent_go/identity'
+  autoload :IdentityDocument, 'prevent_go/identity_document'
   autoload :PropertyTaxNotice, 'prevent_go/property_tax_notice'
   autoload :ProviderInvoice, 'prevent_go/provider_invoice'
   autoload :TaxNotice, 'prevent_go/tax_notice'
