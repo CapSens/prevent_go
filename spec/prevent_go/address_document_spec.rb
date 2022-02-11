@@ -1,18 +1,18 @@
-RSpec.describe PreventGo::PropertyTaxNotice do
+RSpec.describe PreventGo::AddressDocument do
   describe '.new' do
-    context 'with only a valid file', cassette: :property_tax_notice_valid do
+    context 'with only a valid file', cassette: :address_document_valid do
       subject { described_class.new(file) }
       let(:file) { test_file_path_for('test.pdf') }
 
       it 'should instanciate an object' do
         instance = subject
         expect(instance).to be_a(described_class)
-        expect(instance.document_type).to eq('PROPERTY_TAX_NOTICE')
+        expect(instance.document_type).to eq('PHONE_INVOICE')
       end
     end
   end
 
-  describe 'instance methods', cassette: :property_tax_notice_valid do
+  describe 'instance methods', cassette: :address_document_valid do
     let(:instance) { described_class.new(file) }
     let(:file) { test_file_path_for('test.pdf') }
 
@@ -69,7 +69,7 @@ RSpec.describe PreventGo::PropertyTaxNotice do
     describe '.endpoint' do
       subject { instance.send(:endpoint) }
 
-      it { is_expected.to eq('/property-tax-notice') }
+      it { is_expected.to eq('/any') }
     end
   end
 end
