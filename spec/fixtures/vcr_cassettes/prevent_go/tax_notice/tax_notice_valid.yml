@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://integration-api.preventgo.io/v2/tax-notice
+    uri: https://integration-api.preventgo.io/v2/any
     body:
       encoding: ASCII-8BIT
       base64_string: |
@@ -42,7 +42,7 @@ http_interactions:
       - ROUTEID=.1;
     body:
       encoding: UTF-8
-      string: "{\"requestInfo\":{\"timestamp\":\"2017-04-06T08:33:46.457Z\",\"duration\":155,\"uuid\":\"string\",\"remainingRequests\":22,\"state\":\"IN_PROGRESS\",\"callbackSecretToken\":\"string\"},\"processedImageUrl\":\"string\",\"documentType\":\"TAX_NOTICE\",\"controlsGroups\":{\"document\":{\"typeRecognized\":\"OK\",\"quality\":{\"aboveMinimumThreshold\":\"OK\",\"errorCode\":0},\"fiscalNumberFound\":\"OK\",\"noAnnotationFound\":\"OK\",\"noTamperingSignFound\":\"OK\"},\"holder\":{\"documentConsistency\":{\"birthNameFound\":\"OK\",\"lastNameFound\":\"OK\",\"firstNameFound\":\"OK\",\"firstNameInitialsFound\":\"OK\",\"addressFound\":\"OK\"}},\"additional\":{\"expressionSearch\":{\"additionalProp1\":{\"found\":\"OK\",\"occurrences\":[{\"lineText\":\"string\",\"matchText\":\"string\",\"startIndex\":0}]},\"additionalProp2\":{\"found\":\"OK\",\"occurrences\":[{\"lineText\":\"string\",\"matchText\":\"string\",\"startIndex\":0}]},\"additionalProp3\":{\"found\":\"OK\",\"occurrences\":[{\"lineText\":\"string\",\"matchText\":\"string\",\"startIndex\":0}]}}}},\"documentDetails\":{\"firstName\":\"ANNA\",\"birthName\":\"ANNA\",\"lastName\":\"DUPONT\",\"address\":\"12 rue Montgolfier\\\\n32600 ISLE JOURDAIN\",\"issuanceDate\":\"2018-03-02\"}}"
+      string: "{\"requestInfo\": {\"timestamp\": \"2021-02-03T13:35:37.075Z\",\"state\": \"DONE\",\"duration\": 11782,\"uuid\": \"91012b8c-00b7-4cba-b032-7dc555e3b2da\"},\"documentTypeFamily\": \"TAX_DOCUMENT\",\"documentType\": \"TAX_NOTICE\",\"pages\": [{\"fileIndex\": 0,\"pageIndexInFile\": 0}],\"taxDocumentInfo\": {\"taxNoticeDetails\": {\"taxNoticeReference\": \"987654321\",\"holder1\": {\"firstNames\": [\"XXXX\"],\"firstName\": \"XXXX\",\"birthDate\": \"1966-06-14\",\"birthName\": \"XXXX\",\"lastName\": \"XXXX\"},\"holder2\": {\"firstNames\": [\"XXXX\",\"XXXX\"],\"firstName\": \"XXXX\",\"birthDate\": \"1966-08-30\",\"birthName\": \"XXXX\",\"lastName\": \"XXXX\"},\"address\": {\"address1\": \"13 RUE SAINT MARCELIN\",\"city\": \"MARSEILLE\",\"postalCode\": \"13010\"},\"issuanceDate\": \"2020-07-08\",\"globalGrossIncome\": 46761,\"taxableIncome\": 44025,\"referenceIncome\": 71802,\"taxAmount\": 4524,\"familyStatusCode\": \"MARRIED\",\"dependentPersonsCount\": 1,\"partsCount\": 2.5},\"documentDetails\": {\"taxNoticeReference\": \"987654321\",\"fiscalNumber1\": \"123456789\",\"fiscalNumber2\": \"234567890\"},\"controlsGroups\": {\"taxNotice\": {\"taxNoticeExists\": \"OK\",\"documentConsistency\": {\"issuanceDateMatch\": \"OK\",\"referenceIncomeMatch\": \"OK\"},\"holder1Consistency\": {\"birthNameMatch\": \"KO\",\"lastNameMatch\": \"SKIPPED\",\"firstNameMatch\": \"KO\",\"birthDateMatch\": \"KO\"}},\"document\": {\"typeRecognized\": \"OK\",\"quality\": {\"aboveMinimumThreshold\": \"OK\"},\"noAnnotationFound\": \"OK\",\"noTamperingSignFound\": \"OK\",\"taxNoticeReferenceFound\": \"OK\",\"fiscalNumberFound\": \"OK\"}}},\"controlsSummary\": -3,\"keysWithError\": [\"taxNotice.holder1Consistency.birthDateMatch\",\"taxNotice.holder1Consistency.birthNameMatch\",\"taxNotice.holder1Consistency.firstNameMatch\"]}"
     http_version:
   recorded_at: Fri, 07 Jun 2019 10:34:37 GMT
 recorded_with: VCR 4.0.0

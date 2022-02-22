@@ -46,11 +46,10 @@ Parent module
 Each type of document that can be verified has his own class as follow:
 
 ```ruby
+    PreventGo::AddressDocument
     PreventGo::BankAccount
-    PreventGo::Identity
-    PreventGo::PropertyTaxNotice
+    PreventGo::IdentityDocument
     PreventGo::TaxNotice
-    PreventGo::ProviderInvoice
 ```
 
 Each instance of one of the previous classes can be initialized as following:
@@ -65,7 +64,7 @@ Each instance of one of the previous classes can be initialized as following:
 
 And can access to thoses methods
 
-| method               | Description | 
+| method               | Description |
 |----------------------|-------------|
 | `.document_type`     | return document type as string |
 | `.document_details`  | return a hash with informations givent by the API or an empty hash |
@@ -95,7 +94,7 @@ additional instance methods available:
 - `:bic`
 ------
 
-`PreventGo::Identity`
+`PreventGo::IdentityDocument`
 
 Individual person identity document, can be either ID card, passport or driver license
 
@@ -104,7 +103,7 @@ optional params to pass to bank_account validation are:
 
 example:
 ```ruby
-  PrevenGo::Identity.new(
+  PrevenGo::IdentityDocument.new(
     file,
     holder: {"firstName":"John", "birthName":"Doe"}
   )
@@ -116,14 +115,16 @@ additional instance methods available:
 
 ------
 
-`PreventGo::PropertyTaxNotice`
+`PreventGo::AddressDocument`
+
+Provider invoice or schedule accepted or property tax notice
 
 optional params to pass to bank_account validation are:
 - holder: { "firstName":"James","lastName":"Bond","birthName": "Martinet","address": {"address1":"29 rue du Cheval blanc", "postalCode":"34000", "city":"Montpellier"}}
 
 example:
 ```ruby
-  PrevenGo::PropertyTaxNotice.new(
+  PrevenGo::AddressDocument.new(
     file,
     holder: {"firstName":"John", "birthName":"Doe"}
   )
@@ -154,22 +155,6 @@ example:
     file,
     holder_1: {"firstName":"John", "birthName":"Do"},
     holder_2: {"firstName":"Jane", "birthName":"Undo"}
-  )
-```
-------
-
-`PreventGo::ProviderInvoice`
-
-Provider invoice or schedule accepted
-
-optional params to pass to bank_account validation are:
-- holder: { "firstName":"James","lastName":"Bond","birthName": "Martinet","address": {"address1":"29 rue du Cheval blanc", "postalCode":"34000", "city":"Montpellier"}}
-
-example:
-```ruby
-  PrevenGo::ProviderInvoice.new(
-    file,
-    holder: {"firstName":"John", "birthName":"Doe"}
   )
 ```
 

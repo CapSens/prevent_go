@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://integration-api.preventgo.io/v2
+    uri: https://integration-api.preventgo.io/v2/any
     body:
       encoding: ASCII-8BIT
       base64_string: |

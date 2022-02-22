@@ -9,17 +9,23 @@ module PreventGo
     attr_accessor :params, :request
 
     def bic
-      @request.dig('documentDetails', 'bicCode')
+      @request.dig('bankAccountInfo', 'documentDetails', 'bicCode')
     end
 
     def iban
-      @request.dig('documentDetails', 'iban')
+      @request.dig('bankAccountInfo', 'documentDetails', 'iban')
     end
 
-    private
+    def document_details
+      @_document_details ||= @request.dig('bankAccountInfo', 'documentDetails') || {}
+    end
 
-    def endpoint
-      '/bank-account'
+    def document_controls
+      @_document_controls ||= @request.dig('bankAccountInfo', 'controlsGroups', 'document') || {}
+    end
+
+    def holder_controls
+      @_holder_controls ||= @request.dig('bankAccountInfo', 'controlsGroups', 'holder')
     end
   end
 end
